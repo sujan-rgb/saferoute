@@ -1,0 +1,13 @@
+services:
+  db:
+    image: mysql:8.4
+    command: ["--default-time-zone=+00:00", "--character-set-server=utf8mb4"]
+    environment:
+      MYSQL_ROOT_PASSWORD: root-dev-only
+      MYSQL_DATABASE: saferoute
+      MYSQL_USER: saferoute
+      MYSQL_PASSWORD: change-me
+    ports: ["3306:3306"]
+    volumes: ["saferoute-db:/var/lib/mysql"]
+volumes:
+  saferoute-db:

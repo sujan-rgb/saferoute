@@ -1,0 +1,32 @@
+:root{--bg:#eef2f5;--pn:#fff;--ink:#14232e;--mu:#586a77;--ln:#d3dde4;--sf:#0b7f81;--fs:#5f6f7c;--bl:#5a4fcf;--wn:#c2410c;--lp:#f2b84b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d161d;--pn:#16232d;--ink:#e7eef3;--mu:#93a5b2;--ln:#28394a;--sf:#3cc4c6;--fs:#9aa9b4;--bl:#9b92ff;--wn:#fb923c}}
+:root[data-theme="dark"]{--bg:#0d161d;--pn:#16232d;--ink:#e7eef3;--mu:#93a5b2;--ln:#28394a;--sf:#3cc4c6;--fs:#9aa9b4;--bl:#9b92ff;--wn:#fb923c}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Schibsted Grotesk",system-ui,sans-serif}
+header{padding:18px 20px 6px;max-width:1100px;margin:auto}h1{margin:0;font-size:28px;font-weight:800;letter-spacing:-.5px}header p{margin:2px 0 0;color:var(--mu)}
+nav{display:flex;gap:6px;overflow-x:auto;padding:10px 20px;max-width:1100px;margin:auto}
+nav button,nav a,.chip{border:1px solid var(--ln);background:var(--pn);color:var(--ink);padding:8px 14px;border-radius:99px;font:inherit;cursor:pointer;white-space:nowrap}
+nav button.on,nav a.on,.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--bl);outline-offset:2px}
+main{max-width:1100px;margin:auto;padding:6px 20px 40px}
+.g{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}@media(max-width:820px){.g{grid-template-columns:1fr}}
+.pn{background:var(--pn);border:1px solid var(--ln);border-radius:12px;padding:16px}.pn h2{margin:0 0 8px;font-size:18px}.pn h3{margin:14px 0 6px;font-size:15px}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}.mu{color:var(--mu);font-size:14px}
+svg{width:100%;height:auto;display:block;border-radius:10px}
+.rc{width:100%;text-align:left;display:grid;grid-template-columns:1fr auto;gap:2px 10px;border:2px solid var(--ln);background:var(--pn);color:var(--ink);border-radius:10px;padding:10px 12px;margin:0 0 8px;font:inherit;cursor:pointer}
+.rc.on{border-color:var(--c)}.rc b{font-size:17px}.sc{font-size:26px;font-weight:800;color:var(--c);grid-row:span 2;align-self:center}
+.bar{height:8px;border-radius:9px;background:var(--ln);overflow:hidden}.bar i{display:block;height:100%;background:var(--sf)}
+.fl{display:grid;grid-template-columns:150px 1fr 32px;gap:8px;align-items:center;font-size:14px;margin:4px 0}
+.btn{border:0;background:var(--sf);color:#fff;padding:10px 16px;border-radius:9px;font:inherit;font-weight:600;cursor:pointer}.btn.o{background:none;border:1px solid var(--ln);color:var(--ink)}.btn.d{background:var(--wn)}
+.note{border-left:4px solid var(--lp);padding:6px 10px;background:color-mix(in srgb,var(--lp) 14%,transparent);font-size:14px;margin:10px 0}
+select,input[type=text],textarea{font:inherit;padding:8px;border:1px solid var(--ln);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+label.c{display:flex;gap:8px;align-items:center;margin:4px 0}
+.sos{width:150px;height:150px;border-radius:50%;border:0;background:var(--wn);color:#fff;font:800 32px "Schibsted Grotesk",system-ui,sans-serif;cursor:pointer;display:block;margin:12px auto}
+.st{font-size:12px;padding:2px 8px;border-radius:99px;border:1px solid var(--ln)}.st.verified{border-color:var(--sf);color:var(--sf)}.st.rejected{color:var(--mu);text-decoration:line-through}
+.log{font-size:14px;max-height:200px;overflow:auto;padding-left:18px}details{margin:6px 0}summary{cursor:pointer;font-weight:600}
+nav a{text-decoration:none;display:inline-block}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.fld{display:block;margin:10px 0 4px;font-weight:600;font-size:14px}
+.err{border-left:4px solid var(--wn);padding:6px 10px;background:color-mix(in srgb,var(--wn) 12%,transparent);font-size:14px;margin:10px 0}
+.auth{max-width:420px;margin:40px auto}
+.ct{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:8px 0;border-top:1px solid var(--ln);flex-wrap:wrap}
