@@ -173,7 +173,7 @@ CREATE TABLE safe_walk_contacts (
   contact_id BIGINT UNSIGNED NOT NULL,
   PRIMARY KEY (session_id, contact_id),
   FOREIGN KEY (session_id) REFERENCES safe_walk_sessions(id) ON DELETE CASCADE,
-  FOREIGN KEY (contact_id) REFERENCES trusted_contacts(id)   ON DELETE CASCADE
+  FOREIGN KEY (contact_id) REFERENCES trusted_contacts(id)
 ) ENGINE=InnoDB;
 
 CREATE TABLE safe_walk_events (                              -- the "What your contacts see" log; holds no coordinates
@@ -200,7 +200,7 @@ CREATE TABLE sos_events (
   triggered_at     TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   ended_at         DATETIME NULL,
   UNIQUE KEY uq_idem (user_id, idempotency_key),
-  FOREIGN KEY (contact_id) REFERENCES trusted_contacts(id) 
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
 -- ───────── Notification outbox (written in the same transaction as the event) ─────────
